@@ -1,0 +1,2 @@
+hello namaste ! 
+this is a static file
