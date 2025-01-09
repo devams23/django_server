@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Building the project...'
+                echo 'Building the project.....'
                 cat Dockerfile
             }
         }
