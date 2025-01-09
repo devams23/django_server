@@ -7,10 +7,17 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Build') {
+        stage('Build Docker Image') {
             steps {
-                echo 'Building the project.....'
-                cat Dockerfile
+                script {
+                    echo 'Building the Docker image...'
+                    sh '''
+                        # Display the Dockerfile (optional, for debugging)
+                        cat Dockerfile
+                        # Build the Docker image
+                        #docker build -t my-docker-image:latest .
+                    '''
+                }
             }
         }
     }
