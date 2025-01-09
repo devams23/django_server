@@ -5,9 +5,7 @@ RUN apt-get update && apt-get install -y \
     python3-distutils \
     && apt-get clean
 
-# Install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install Django==5.1.4
 
 # Copy project files
 COPY . /app
