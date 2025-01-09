@@ -1,4 +1,9 @@
 FROM python:3
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    python3-distutils \
+    && apt-get clean 
+    
 RUN pip install django==3.2
 
 COPY . .
